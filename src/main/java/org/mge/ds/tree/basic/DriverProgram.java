@@ -2,20 +2,22 @@ package org.mge.ds.tree.basic;
 
 public class DriverProgram {
 	public static void main(String[] args) {
-		AVLTree tree = new AVLTree();
-		tree.root = tree.insert(tree.root, 9);
-        tree.root = tree.insert(tree.root, 5);
-        tree.root = tree.insert(tree.root, 10);
-        tree.root = tree.insert(tree.root, 0);
-        tree.root = tree.insert(tree.root, 6);
-        tree.root = tree.insert(tree.root, 11);
-        tree.root = tree.insert(tree.root, -1);
-        tree.root = tree.insert(tree.root, 1);
-        tree.root = tree.insert(tree.root, 2);
+		RedBlackTree tree = new RedBlackTree();
+		tree.insert(7);
+		tree.insert(6);
+		tree.insert(5);
+		tree.insert(4);
+		tree.insert(3);
+		tree.insert(2);
+		tree.insert(1);
 		
-		tree.preorder(tree.root);
-		tree.root = tree.delete(tree.root, 10);
+		System.out.print("Inorder :: ");
+		tree.inorder(tree.root);
 		System.out.println();
+		System.out.print("PreOrder :: ");
 		tree.preorder(tree.root);
+		System.out.println();
+		System.out.print("LevelOrder :: ");
+		tree.levelOrder(tree.root);
 	}
 }

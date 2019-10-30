@@ -2,9 +2,11 @@ package org.mge.ds.tree.basic;
 
 public class Node {
 	int data;
-	int count;
-	int height;
+	int count; //For handling duplicates in BST
+	int height; //For AVL tree
 	Node left, right;
+	Node parent; //For Red-black tree
+	boolean color; //For Red-black tree
 
 	public Node(int data) {
 		this.data = data;
@@ -51,5 +53,27 @@ public class Node {
 
 	public void setHeight(int height) {
 		this.height = height;
+	}
+	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + data;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Node other = (Node) obj;
+		if (data != other.data)
+			return false;
+		return true;
 	}
 }
