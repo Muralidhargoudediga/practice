@@ -6,6 +6,7 @@ import java.util.List;
 
 
 public class Test1 {
+	private static Integer i;
 	public static void main(String[] args) throws FileNotFoundException {
 		
 //		BigDecimal p = new BigDecimal("1");
@@ -19,6 +20,6 @@ public class Test1 {
 //			System.out.println(p);
 //		}
 		//System.out.println("result :" + o.subtract(p));
-		System.out.println(2 >>> 1);
+		System.out.println(i);
 	}
 }
