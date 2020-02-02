@@ -37,7 +37,7 @@ public class KnapsackWitoutRepeats {
 			if(V[i][j] == V[i][j-1]) {
 				j--;
 			} else if(V[i][j] == (V[i-w[j-1]][j-1] + v[j-1])) {
-				i = i - w[j];
+				i = i - w[j-1];
 				track[j-1] = 1;
 				j--;
 			}

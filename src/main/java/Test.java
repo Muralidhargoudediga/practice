@@ -100,7 +100,7 @@ class A {
 	
 }
 
-class B extends A{
+class B extends MA11{
 	int i;
 	String b;
 	@Override
