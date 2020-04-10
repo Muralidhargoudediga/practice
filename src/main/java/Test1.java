@@ -89,6 +89,8 @@ public class Test1 {
 class MA11 {
 	int x;
 	
+	MA11(){}
+	
 	MA11(int x) {
 		this.x = x;
 	}

@@ -1,4 +1,4 @@
-package org.mge.algos;
+package org.mge.algos.dp;
 
 public class NthFibonacciNumber {
 
